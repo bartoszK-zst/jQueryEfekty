@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+	$("#przycisk-od-znikajacego-paragrafu").click(function(){
+  $("#znikajacy-paragraf").toggle("slow");});
+
+	$("#przycisk-od-zanikajacego-paragrafu").click(function(){
+		$("#zanikajacy-paragraf").fadeToggle("slow");});
+
+	$("#przycisk-od-wysuwajacego-sie-paragrafu").click(function(){
+		$("#wysuwajacy-sie-paragraf").slideToggle("slow");});
+
+	$("#przycisk-od-animowanego-paragrafu").click(function(){
+		$("#animowany-paragraf").animate({left: "50%"}, 2000, function(){
+			$("#animowany-paragraf").animate({left: "0"}, 3000)
+		});});
+
+	$("#przycisk-od-zatrzymania-animacji").click(function(){
+		$("#animowany-paragraf").stop()});
+
+	$("#przycisk-od-lancuchowanego-paragrafu").click(function(){
+		$("#lancuchowany-paragraf").slideUp(1000).slideDown(1500).toggle(2000).toggle(2500);});
+
+});
+	</script>
+</head>
+	
+<body>
+
+	<div>
+		<p id="znikajacy-paragraf">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+		<button id="przycisk-od-znikajacego-paragrafu">Toggle article above</button>
+	</div>
+
+	<div>
+		<p id="zanikajacy-paragraf">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+		<button id="przycisk-od-zanikajacego-paragrafu">Fade article above</button>
+	</div>
+
+	<div>
+		<p id="wysuwajacy-sie-paragraf">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+		<button id="przycisk-od-wysuwajacego-sie-paragrafu">Slide article above</button>
+	</div>
+
+	<div>
+		<p id="animowany-paragraf" style="position: relative;">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+		<button id="przycisk-od-animowanego-paragrafu">Animate article above and callback</button>
+		<button id="przycisk-od-zatrzymania-animacji">Stop animating article above</button>
+	</div>
+
+	<div>
+		<p id="lancuchowany-paragraf">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</p>
+		<button id="przycisk-od-lancuchowanego-paragrafu">Chain article above</button>
+	</div>
+
+</body>
+	
+</html>
